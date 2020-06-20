@@ -16,6 +16,10 @@
 
     <packaging>feature</packaging>
 
+    <name>Apache Aries JAX-RS Jackson Karaf Feature</name>
+
+    <description>Apache Aries JAX-RS Jackson Karaf feature</description>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.jax.rs</groupId>

@@ -85,20 +85,6 @@
             org.xml.sax.ext,
             org.xml.sax.helpers
         ]]></bndjava15temorarysupplementalpackages>
-
-        <karaf-maven-plugin.version>4.3.0.RC1</karaf-maven-plugin.version>
-
-        <!-- Override version for maven-install-plugin due to a bug in the latest version (3.0.0-M1) preventing the
-        installation of artifacts of package type feature. See: https://issues.apache.org/jira/browse/MINSTALL-151 -->
-
-        <!--
-        <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-        -->
-
-        <!-- Override version for maven-deploy-plugin due to a bug similar to the maven-install-plugin -->
-        <!--
-        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        -->
     </properties>
 
     <scm>
@@ -501,37 +487,6 @@
                         </archive>
                     </configuration>
                 </plugin>
-                <!--
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>${maven-install-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${maven-deploy-plugin.version}</version>
-                </plugin>
-                -->
-                <!--
-                <plugin>
-                    <groupId>org.apache.karaf.tooling</groupId>
-                    <artifactId>karaf-maven-plugin</artifactId>
-                    <version>${karaf-maven-plugin.version}</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <aggregateFeatures>false</aggregateFeatures>
-                        <enableGeneration>true</enableGeneration>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>generate-features-file</id>
-                            <phase>generate-resources</phase>
-                            <goals>
-                                <goal>features-generate-descriptor</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-                -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>
@@ -559,15 +514,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
-        <!--
-        <plugins>
-            <plugin>
-                <groupId>org.apache.karaf.tooling</groupId>
-                <artifactId>karaf-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-        -->
     </build>
 
     <reporting>

@@ -15,6 +15,10 @@
 
     <packaging>feature</packaging>
 
+    <name>Apache Aries JAX-RS Whiteboard Karaf Feature</name>
+
+    <description>Apache Aries JAX-RS Whiteboard Karaf feature</description>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.jax.rs</groupId>

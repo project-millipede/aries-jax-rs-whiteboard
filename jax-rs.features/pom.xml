@@ -29,6 +29,7 @@
     </parent>
 
     <artifactId>org.apache.aries.jax.rs.features-parent</artifactId>
+
     <description>Apache Aries JAX-RS Whiteboard Karaf features repository</description>
     <name>Apache Aries JAX-RS Whiteboard Karaf Features</name>
 
@@ -39,55 +40,23 @@
 
         <!-- Override version for maven-install-plugin due to a bug in the latest version (3.0.0-M1) preventing the
         installation of artifacts of package type feature. See: https://issues.apache.org/jira/browse/MINSTALL-151 -->
-        <!--
         <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-        -->
 
         <!-- Override version for maven-deploy-plugin due to a bug similar to the maven-install-plugin -->
-        <!--
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-        -->
 
         <org.apache.aries.jax.rs.integration.version>1.0.3-SNAPSHOT</org.apache.aries.jax.rs.integration.version>
-
     </properties>
 
     <modules>
         <module>org.apache.aries.jax.rs.features.whiteboard</module>
         <module>org.apache.aries.jax.rs.features.jackson</module>
-        <!--<module>org.apache.aries.jax.rs.features</module>-->
+        <module>org.apache.aries.jax.rs.features</module>
     </modules>
-
-
-    <!--
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.aries.jax.rs</groupId>
-            <artifactId>org.apache.aries.jax.rs.whiteboard</artifactId>
-            <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.aries.jax.rs.cxf.repackage</groupId>
-                    <artifactId>org.apache.aries.jax.rs.cxf.repackage</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.aries.jax.rs</groupId>
-            <artifactId>org.apache.aries.jax.rs.jackson</artifactId>
-            <version>${org.apache.aries.jax.rs.integration.version}</version>
-        </dependency>
-    </dependencies>
-    -->
 
     <build>
         <pluginManagement>
             <plugins>
-                <!--
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>${maven-install-plugin.version}</version>
@@ -96,7 +65,6 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
                 </plugin>
-                -->
                 <plugin>
                     <groupId>org.apache.karaf.tooling</groupId>
                     <artifactId>karaf-maven-plugin</artifactId>
