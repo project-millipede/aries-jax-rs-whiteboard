@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.aries.jax.rs</groupId>
+        <artifactId>org.apache.aries.jax.rs.features-parent</artifactId>
+        <version>1.0.9-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>org.apache.aries.jax.rs.features</artifactId>
+    <version>${org.apache.aries.jax.rs.integration.version}</version>
+
+    <packaging>feature</packaging>
+
+    <!--
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.features.whiteboard</artifactId>
+            <version>${parent.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.features.jackson</artifactId>
+            <version>${org.apache.aries.jax.rs.integration.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+    </dependencies>
+    -->
+
+    <!--
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.whiteboard</artifactId>
+            <version>${parent.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.jackson</artifactId>
+            <version>${org.apache.aries.jax.rs.integration.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.shiro.authc</artifactId>
+            <version>${org.apache.aries.jax.rs.integration.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.shiro.authz</artifactId>
+            <version>${org.apache.aries.jax.rs.integration.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.jaxb.json.cxf-jettison</artifactId>
+            <version>${org.apache.aries.jax.rs.integration.version}</version>
+            <type>xml</type>
+            <classifier>features</classifier>
+        </dependency>
+
+    </dependencies>
+    -->
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven-install-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>${maven-deploy-plugin.version}</version>
+                </plugin>
+                -->
+
+                <plugin>
+                    <groupId>org.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-maven-plugin</artifactId>
+                    <version>${karaf-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <aggregateFeatures>false</aggregateFeatures>
+                        <enableGeneration>true</enableGeneration>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>generate-features-file</id>
+                            <phase>generate-resources</phase>
+                            <goals>
+                                <goal>features-generate-descriptor</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.apache.aries.jax.rs</groupId>
+        <artifactId>org.apache.aries.jax.rs.features-parent</artifactId>
+        <version>1.0.9-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>org.apache.aries.jax.rs.features.whiteboard</artifactId>
+
+    <packaging>feature</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.whiteboard</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.aries.jax.rs.cxf.repackage</groupId>
+                    <artifactId>org.apache.aries.jax.rs.cxf.repackage</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+</project>
