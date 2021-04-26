@@ -73,7 +73,7 @@
         <osgi.namespace.extender.version>1.0.1</osgi.namespace.extender.version>
         <osgi.namespace.implementation.version>1.0.0</osgi.namespace.implementation.version>
         <osgi.namespace.service.version>1.0.0</osgi.namespace.service.version>
-        <osgi.service.cm.version>1.5.0</osgi.service.cm.version>
+        <osgi.service.cm.version>1.6.0</osgi.service.cm.version>
         <osgi.service.component.annotations.version>1.4.0</osgi.service.component.annotations.version>
         <osgi.service.http.whiteboard.version>1.0.0</osgi.service.http.whiteboard.version>
         <osgi.service.jaxrs.version>1.0.0</osgi.service.jaxrs.version>
